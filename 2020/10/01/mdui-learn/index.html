@@ -17,24 +17,24 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"nekostack.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"blog.nekostack.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="使用现代前端框架可以快速搭建响应式页面，这次学习了MDUI的使用，记了相关的笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MDUI笔记&lt;1&gt;">
-<meta property="og:url" content="https://nekostack.github.io/2020/10/01/mdui-learn/index.html">
+<meta property="og:url" content="https://blog.nekostack.com/2020/10/01/mdui-learn/index.html">
 <meta property="og:site_name" content="猫栈博客">
 <meta property="og:description" content="使用现代前端框架可以快速搭建响应式页面，这次学习了MDUI的使用，记了相关的笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-01T12:48:48.000Z">
-<meta property="article:modified_time" content="2020-10-02T15:56:18.361Z">
+<meta property="article:modified_time" content="2020-11-25T11:10:52.168Z">
 <meta property="article:author" content="猫七">
 <meta property="article:tag" content="MDUI">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://nekostack.github.io/2020/10/01/mdui-learn/">
+<link rel="canonical" href="https://blog.nekostack.com/2020/10/01/mdui-learn/">
 
 
 <script id="page-configurations">
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://nekostack.github.io/2020/10/01/mdui-learn/">
+    <link itemprop="mainEntityOfPage" href="https://blog.nekostack.com/2020/10/01/mdui-learn/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -199,7 +199,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-02 23:56:18" itemprop="dateModified" datetime="2020-10-02T23:56:18+08:00">2020-10-02</time>
+                <time title="修改时间：2020-11-25 19:10:52" itemprop="dateModified" datetime="2020-11-25T19:10:52+08:00">2020-11-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -223,26 +223,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="入坑MDUI前的知识点"><a href="#入坑MDUI前的知识点" class="headerlink" title="入坑MDUI前的知识点"></a>入坑MDUI前的知识点</h1><h2 id="Material-Design"><a href="#Material-Design" class="headerlink" title="Material Design"></a>Material Design</h2><p><strong>MDUI</strong>的全拼是<strong>M</strong>aterial <strong>D</strong>esign <strong>U</strong>ser <strong>I</strong>nterface</p>
-<p>Material Design，中文名为材料设计语言，是由Google推出的全新的设计语言，谷歌表示，这种设计语言旨在为手机、平板电脑、台式机和“其他平台”提供更一致、更广泛的“外观和感觉”。</p>
-<p>说人话就是，Google 发布的Material Design语言是一套界面设计标准，而本文的主角<strong>MDUI</strong>则是基于这个标准的一个UI框架。</p>
-<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><h3 id="困在不同屏幕的web开发"><a href="#困在不同屏幕的web开发" class="headerlink" title="困在不同屏幕的web开发"></a>困在不同屏幕的web开发</h3><p>早年设计Web时，页面是以适配特定的屏幕大小为考量创建的。如果用户正在<strong>使用比设计者考虑到的更小或者更大的屏幕</strong>，那么结果从多余的滚动条，到过长的行和没有被合理利用的空间，不一而足。</p>
-<p>随着移动Web在早期的功能手机上开始成为现实，希望拥抱移动端的公司普遍希望为他们的网站创建一个有着不同的网址的移动版本（大多是像<em>m.example.com</em>或者<em>example.mobi</em>这类）。这意味着一个网站需要开发两个分开的版本，而且<strong>要保持时效性</strong>。</p>
-<p>除此以外，这些移动网站的体验经常<strong>缩水</strong>。由于移动设备变得更加强大，足以显示完整的网站，对于那些被困在移动版网站的移动端用户来说，这是很折磨人的，他们因此也没法获取他们知道在支持所有功能的桌面版网站上能找到的信息。</p>
-<p>总结一下，在响应式设计兴盛前，对于不同尺寸屏幕的前端web只能单独设计，而移动端由于再开发的繁琐往往被砍掉许多功能，体验极差。</p>
-<h3 id="媒介查询"><a href="#媒介查询" class="headerlink" title="媒介查询"></a>媒介查询</h3><p>媒介查询允许我们运行一系列测试，例如用户的屏幕是否大于某个宽度或者某个分辨率，并将CSS选择性地适应用户的需要应用在样式化页面上。</p>
-<p>这个特性为响应式设计提供了一种新的思路，现代布局技术都已经默认是响应式的了。</p>
-<p>现代布局技术：</p>
+        <p>持续更新~</p>
+<h1 id="为什么是MDUI"><a href="#为什么是MDUI" class="headerlink" title="为什么是MDUI"></a>为什么是MDUI</h1><p><strong>MDUI</strong>的全拼是<strong>M</strong>aterial <strong>D</strong>esign <strong>U</strong>ser <strong>I</strong>nterface</p>
+<p>Material Design，中文名为材料设计语言，是由Google推出的全新的设计语言，谷歌表示，这种设计语言<strong>旨在为手机、平板电脑、台式机和“其他平台”提供更一致、更广泛的“外观和感觉”</strong>。</p>
+<p>说人话就是，Google 发布的Material Design语言是一套界面设计标准，而本文的主角<strong>MDUI</strong>则是基于这个标准的一个UI框架，这个框架支持通过媒介查询，<strong>在一个页面上实现不同屏幕大小的设备展示不同的内容样式</strong>。</p>
+<p>关键词：</p>
 <ul>
-<li>多栏布局（column）</li>
-<li>伸缩盒（flex）</li>
-<li>网格（grid）</li>
+<li>响应式设计</li>
+<li>媒介查询（CSS3 @media查询）</li>
+<li>视口（viewport）</li>
 </ul>
-<h3 id="视口基础"><a href="#视口基础" class="headerlink" title="视口基础"></a>视口基础</h3><p>一个典型的针对移动端优化的站点包含类似下面的内容：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>只有在head标签中添加该标签，才会对移动端进行优化</p>
-<h1 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h1><h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>使用MDUI需要引入对应的css和js文件，官方CDN如下：</p>
+<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>使用MDUI需要引入对应的css和js文件，官方CDN如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- MDUI CSS --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span></span></span><br><span class="line"><span class="tag">  <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">integrity</span>=<span class="string">&quot;sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- MDUI JavaScript --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">integrity</span>=<span class="string">&quot;sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="颜色与主题"><a href="#颜色与主题" class="headerlink" title="颜色与主题"></a>颜色与主题</h2><h3 id="主色和强调色"><a href="#主色和强调色" class="headerlink" title="主色和强调色"></a>主色和强调色</h3><p>MDUI中预定义颜色分为两类：主色和强调色</p>
@@ -322,13 +313,6 @@
 
 
         
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/10/01/mid-autumn-festival/" rel="prev" title="双节快乐">
-      <i class="fa fa-chevron-left"></i> 双节快乐
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
       </footer>
     
   </article>
@@ -386,7 +370,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%A5%E5%9D%91MDUI%E5%89%8D%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">入坑MDUI前的知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Material-Design"><span class="nav-number">1.1.</span> <span class="nav-text">Material Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.</span> <span class="nav-text">响应式设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%B0%E5%9C%A8%E4%B8%8D%E5%90%8C%E5%B1%8F%E5%B9%95%E7%9A%84web%E5%BC%80%E5%8F%91"><span class="nav-number">1.2.1.</span> <span class="nav-text">困在不同屏幕的web开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AA%92%E4%BB%8B%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.2.</span> <span class="nav-text">媒介查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E5%8F%A3%E5%9F%BA%E7%A1%80"><span class="nav-number">1.2.3.</span> <span class="nav-text">视口基础</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%B7%E6%AD%A5"><span class="nav-number">2.</span> <span class="nav-text">起步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">开始使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E4%B8%8E%E4%B8%BB%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">颜色与主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%89%B2%E5%92%8C%E5%BC%BA%E8%B0%83%E8%89%B2"><span class="nav-number">2.2.1.</span> <span class="nav-text">主色和强调色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E5%92%8C%E6%96%87%E6%9C%AC%E9%A2%9C%E8%89%B2"><span class="nav-number">2.2.2.</span> <span class="nav-text">背景颜色和文本颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E9%A2%9C%E8%89%B2"><span class="nav-number">2.2.3.</span> <span class="nav-text">主题颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E4%BD%93"><span class="nav-number">2.2.4.</span> <span class="nav-text">字体</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">引用资料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AFMDUI"><span class="nav-number">1.</span> <span class="nav-text">为什么是MDUI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">开始使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E4%B8%8E%E4%B8%BB%E9%A2%98"><span class="nav-number">1.2.</span> <span class="nav-text">颜色与主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%89%B2%E5%92%8C%E5%BC%BA%E8%B0%83%E8%89%B2"><span class="nav-number">1.2.1.</span> <span class="nav-text">主色和强调色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E5%92%8C%E6%96%87%E6%9C%AC%E9%A2%9C%E8%89%B2"><span class="nav-number">1.2.2.</span> <span class="nav-text">背景颜色和文本颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E9%A2%9C%E8%89%B2"><span class="nav-number">1.2.3.</span> <span class="nav-text">主题颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E4%BD%93"><span class="nav-number">1.2.4.</span> <span class="nav-text">字体</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E8%B5%84%E6%96%99"><span class="nav-number">2.</span> <span class="nav-text">引用资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -402,20 +386,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
